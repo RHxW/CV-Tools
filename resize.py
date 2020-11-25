@@ -16,7 +16,7 @@ def ImageResizeScale(
     :param in_place:
     :return:
     """
-    if not image:
+    if image is None:
         return None
     if in_place:
         img = image
@@ -42,7 +42,7 @@ def ImageResizePad(
         padding: bool = True,
         in_place: bool = False
 ):
-    if not image:
+    if image is None:
         return None
     # check dst_size type and values
     if type(dst_size) in [int, tuple, list]:
@@ -75,7 +75,7 @@ def ImageResizePad(
         else:
             raise RuntimeError("padding_val should be int or tuple or list type")
 
-    H, W, C = image.shape()
+    H, W, C = image.shape
     if in_place:
         img = image
     else:
