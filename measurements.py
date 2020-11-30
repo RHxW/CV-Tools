@@ -1,7 +1,11 @@
 def get_measurements(TP, FN, FP, TN, alpha:int=None):
     P = TP + FN
     N = FP + TN
-        if P == 0 or N == 0:
+    if P == 0 or N == 0:
+        if P == 0:
+            print("P(TP + FN) is 0!")
+        else:
+            print("N(FP + TN) is 0!")
         return {
             "TP": TP,
             "FN": FN,
