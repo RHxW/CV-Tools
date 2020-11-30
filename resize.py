@@ -111,7 +111,7 @@ def ImageResizePad(
             # interp_methods = [cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_NEAREST, cv2.INTER_LANCZOS4]
             # interp_method = interp_methods[random.randrange(5)]
             img = cv2.resize(img, None, None, fx=resize_scale, fy=resize_scale, interpolation=cv2.INTER_LINEAR)
-        if h_ratio > w_ratio:  # padding W
+        if h_ratio < w_ratio:  # padding W
             pl = (dst_size[1] - img.shape[1]) // 2
             pr = dst_size[1] - img.shape[1] - pl
         else:
