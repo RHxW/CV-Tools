@@ -16,12 +16,12 @@ def size_filter(img_root, min_h, min_w=0, max_h=float("inf"), max_w=float("inf")
     if mode in ["h", "both"]:
         min_h = max(min_h, 0)
         if min_h >= max_h or max_h <= 0:
-            raise RuntimeError("invalid H range")
+            raise RuntimeError("invalid Height range")
 
     if mode in ["w", "both"]:
         min_w = max(min_w, 0)
         if min_w >= max_w or max_w <= 0:
-            raise RuntimeError("invalid W range")
+            raise RuntimeError("invalid Width range")
 
     if not is_delete ^ is_copy:
         raise RuntimeError("Delete <OR> Copy! OR!!! At least ONE!!!")
@@ -31,7 +31,7 @@ def size_filter(img_root, min_h, min_w=0, max_h=float("inf"), max_w=float("inf")
     img_retain = []  # image retained
     for i in range(N):
         _img_name = imgs[i]
-        _img = cv2.imread(_img_name)
+        _img = cv2.imread(img_root + _img_name)
         H, W, C = _img.shape
         flg = False  # True: remove, False: retain
         if mode in ["h", "both"]:
