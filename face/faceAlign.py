@@ -67,13 +67,11 @@ def alignFace(fimage, fmarks, scale=1.0):
     scale_x = float(w)/float(96)
     scale_y = float(h)/float(112)
     std_marks = np.array([
-
     30.2946, 51.6963,
     65.5318, 51.5014,
     48.0252, 71.7366,
     33.5493, 92.3655,
     62.7299, 92.2041
-
     ], dtype=np.float).reshape(5, 2)
     # print(std_marks)
 
