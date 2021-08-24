@@ -25,8 +25,8 @@ video = cv2.VideoWriter('ss.mp4', cv2.VideoWriter_fourcc(*"mp4v"), fps, (width,h
     cv2.VideoWriter_fourcc('m', 'p', '4', 'v')    文件名后缀为.mp4
 参数3 为帧播放速率
 参数4 (width,height)为视频帧大小
-
 """
+
 for i in range(1,60):
     file_name = './aa/img' + str(i) + '.jpg'
     image=cv2.imread(file_name)
