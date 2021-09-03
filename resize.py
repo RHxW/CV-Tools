@@ -122,8 +122,7 @@ def ImageResizePad(
         if padding:
             img = cv2.copyMakeBorder(img, pt, pb, pl, pr, cv2.BORDER_CONSTANT, value=padding_val)
     else:
-        img = cv2.resize(img, dst_size[0], dst_size[1],
-                         interpolation=cv2.INTER_LINEAR)  # TODO dst_size order???xy or yx
+        img = cv2.resize(img, dst_size, interpolation=cv2.INTER_LINEAR)  # TODO dst_size order???xy or yx
     padding_shape = (pt, pb, pl, pr)
 
     return img, padding_shape

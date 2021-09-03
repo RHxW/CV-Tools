@@ -18,7 +18,7 @@ def face_anno_vis(img, faces, box_color=(0, 255, 255), lmk_color=(0, 255, 0)):
     anno_img = copy.deepcopy(img)
     for i, face_anno in enumerate(faces):
         if len(face_anno) != 2:
-            print(" length of face_anno in faces != 2")
+            print("length of face_anno in faces != 2")
             return anno_img
         _box, _lmks = face_anno
         x1, y1, x2, y2 = _box
