@@ -37,8 +37,8 @@ def video_rotate(video_path, save_path, rotate_direction, rotate_angle):
             break
 
 if __name__ == "__main__":
-    video_path = "C:/Users/Admin/Downloads/256.mp4"
-    save_path = "C:/Users/Admin/Downloads/256R.mp4"
+    video_path = "C:/Users/Admin/Downloads/lixiang2.mp4"
+    save_path = "C:/Users/Admin/Downloads/lixiang2R.mp4"
     rotate_direction = 1
     rotate_angle = 1
     video_rotate(video_path, save_path, rotate_direction, rotate_angle)
