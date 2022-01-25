@@ -52,4 +52,3 @@ def voc07xml2json(anno_dir, json_dir):
         jsname = name.split('.')[0]
         with open(json_dir + jsname + '.json', 'w') as f:
             json.dump(info, f, ensure_ascii=False)
-
