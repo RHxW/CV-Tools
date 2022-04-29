@@ -2,7 +2,7 @@ import cv2
 from copy import deepcopy
 
 
-def ImageResizeScale(
+def image_resize_scale(
         image,
         scale_x: float or int,
         scale_y: float or int,
@@ -10,7 +10,7 @@ def ImageResizeScale(
 ):
     """
     resize image at given scales
-    :param image:
+    :param image:  [H, W, C]
     :param scale_x:
     :param scale_y:
     :param in_place:
@@ -34,7 +34,7 @@ def ImageResizeScale(
     return img
 
 
-def ImageResizePad(
+def image_resize_pad(
         image,
         dst_size: int or tuple or list,
         padding_val: int or tuple or list,
@@ -42,6 +42,16 @@ def ImageResizePad(
         padding: bool = True,
         in_place: bool = False
 ):
+    """
+    resize image at given size and padding
+    :param image:  [H, W, C]
+    :param dst_size:
+    :param padding_val:
+    :param keep_aspect_ratio:
+    :param padding:
+    :param in_place:
+    :return:
+    """
     if image is None:
         return None
     # check dst_size type and values
