@@ -2,7 +2,7 @@ import cv2
 import os
 import numpy as np
 
-from resize import ImageResizePad
+from resize import image_resize_pad
 
 
 def img_assemble(img_dirs_root, save_dir, img_size=(-1, -1), N=-1):
@@ -71,7 +71,7 @@ def img_assemble(img_dirs_root, save_dir, img_size=(-1, -1), N=-1):
                 # 第i行第j列
                 _path = tmp_img_paths[j][i]
                 _img = cv2.imread(_path)
-                _img, padding_shape = ImageResizePad(_img, img_size, 0)
+                _img, padding_shape = image_resize_pad(_img, img_size, 0)
                 final_matrix[i * img_size[0]:(i + 1) * img_size[0], j * img_size[1]:(j + 1) * img_size[1], :] = _img
 
         cv2.imwrite(save_dir + "%d.png" % count, final_matrix)
