@@ -64,5 +64,5 @@ def video_resize(video_path, save_path, save_size):
 if __name__ == "__main__":
     video_path = "C:/Users/Admin/Downloads/lixiang2.mp4"
     save_path = "C:/Users/Admin/Downloads/256.mp4"
-    save_size = (256, 256)
+    save_size = (256, 256)  # W, H
     video_resize(video_path, save_path, save_size)

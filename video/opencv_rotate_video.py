@@ -19,7 +19,7 @@ def video_rotate(video_path, save_path, rotate_direction, rotate_angle):
     fps = int(cap.get(5))  # 获取帧率
     H = int(cap.get(4))
     W = int(cap.get(3))
-    videowriter = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc('m', 'p', '4', 'v'), fps, (H, W))
+    videowriter = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc('m', 'p', '4', 'v'), fps, (W, H))
 
     center = (W // 2, H // 2)
     angle = rotate_angle * 90
